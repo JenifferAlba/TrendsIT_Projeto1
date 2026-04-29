@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio profissional de Jeniffer Caroline Alba: Engenharia da Computação, IT Service Management, Power BI, Front-end, Dados e Inovação." />
+  <meta name="keywords" content="Jeniffer Alba, portfólio front-end, ITSM, Power BI, Engenharia da Computação, HTML5, CSS3, tecnologia, São Paulo" />
+  <meta name="author" content="Jeniffer Caroline Alba" />
+  <title>Jeniffer Alba | Portfólio Profissional</title>
+
+  <style>
+    :root {
+      --navy: #06172e;
+      --navy-2: #071f3d;
+      --navy-soft: #0d2748;
+      --blue: #2f80ed;
+      --cyan: #5eead4;
+      --gold: #f8d77a;
+      --white: #ffffff;
+      --text: #dbeafe;
+      --muted: #a9bbd6;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(47, 128, 237, 0.32), transparent 32%),
+        radial-gradient(circle at 82% 18%, rgba(94, 234, 212, 0.18), transparent 28%),
+        linear-gradient(135deg, var(--navy) 0%, #030914 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .reveal {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(6, 23, 46, 0.82);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      color: var(--white);
+    }
+
+    .logo span {
+      color: var(--cyan);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--muted);
+      transition: 0.3s;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--cyan);
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--white);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 54px;
+      padding: 76px 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(94, 234, 212, 0.28);
+      background: rgba(94, 234, 212, 0.08);
+      color: var(--cyan);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.45rem, 6vw, 5.2rem);
+      line-height: 1.03;
+      color: var(--white);
+      margin-bottom: 22px;
+      letter-spacing: -2.5px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--gold));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .positioning {
+      color: var(--white) !important;
+      font-size: 1.18rem !important;
+      font-weight: 800;
+      border-left: 4px solid var(--cyan);
+      padding-left: 16px;
+      margin-bottom: 34px !important;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 15px;
+      font-weight: 900;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      color: #03101f;
+      box-shadow: 0 16px 36px rgba(47, 128, 237, 0.35);
+    }
+
+    .btn-secondary {
+      border-color: var(--border);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .btn:hover,
+    .project-card:hover,
+    .metric:hover,
+    .timeline-item:hover {
+      transform: translateY(-6px);
+    }
+
+    .profile-card {
+      position: relative;
+      padding: 20px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: float 4.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      inset: -90px -90px auto auto;
+      width: 240px;
+      height: 240px;
+      background: rgba(94, 234, 212, 0.28);
+      filter: blur(44px);
+      border-radius: 50%;
+    }
+
+    .profile-photo {
+      position: relative;
+      aspect-ratio: 1 / 1.15;
+      border-radius: 28px;
+      overflow: hidden;
+      background: var(--navy-soft);
+      border: 1px solid var(--border);
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      position: relative;
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(3, 11, 23, 0.55);
+      border: 1px solid var(--border);
+    }
+
+    .profile-info strong {
+      color: var(--white);
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-info span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-title {
+      margin-bottom: 38px;
+    }
+
+    .section-title span {
+      color: var(--cyan);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    .section-title h2 {
+      color: var(--white);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-top: 8px;
+      letter-spacing: -1px;
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+    }
+
+    .card h3 {
+      color: var(--white);
+      margin-bottom: 14px;
+      font-size: 1.38rem;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .skill {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(94, 234, 212, 0.09);
+      border: 1px solid rgba(94, 234, 212, 0.22);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .metric {
+      padding: 26px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(94, 234, 212, 0.12), rgba(255, 255, 255, 0.04));
+      border: 1px solid var(--border);
+      transition: 0.3s;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--white);
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      padding: 24px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      transition: 0.3s;
+    }
+
+    .timeline-item small {
+      color: var(--cyan);
+      font-weight: 900;
+    }
+
+    .timeline-item h3 {
+      color: var(--white);
+      margin: 6px 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: rgba(94, 234, 212, 0.45);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    .project-card h3 {
+      color: var(--white);
+      font-size: 1.28rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      color: var(--cyan);
+      font-weight: 900;
+    }
+
+    .contact-card a {
+      color: var(--cyan);
+      font-weight: 900;
+      word-break: break-word;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 40;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366, #5eead4);
+      color: #02140a;
+      font-size: 1.6rem;
+      font-weight: 900;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) translateY(-4px);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--muted);
+      background: rgba(3, 11, 23, 0.58);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, .profile-card {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .profile-card {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      .projects-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 52px;
+        gap: 36px;
+      }
+
+      .profile-card {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      .projects-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 32px, 1120px);
+      }
+
+      header {
+        position: static;
+      }
+
+      .navbar {
+        align-items: center;
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 16px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 42px;
+        padding: 8px 10px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--border);
+        font-size: 0.86rem;
+      }
+
+      nav a::after {
+        display: none;
+      }
+
+      .hero {
+        padding: 44px 0 56px;
+        text-align: center;
+      }
+
+      .badge {
+        justify-content: center;
+      }
+
+      .positioning {
+        text-align: left;
+      }
+
+      .actions {
+        width: 100%;
+      }
+
+      .btn {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .section-title {
+        text-align: center;
+      }
+
+      .projects-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        background:
+          radial-gradient(circle at 50% 0%, rgba(47, 128, 237, 0.28), transparent 35%),
+          linear-gradient(135deg, var(--navy) 0%, #030914 100%);
+      }
+
+      .container {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .logo {
+        font-size: 1.18rem;
+      }
+
+      nav ul {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      nav a {
+        font-size: 0.82rem;
+        min-height: 40px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.1rem, 13vw, 3.4rem);
+        letter-spacing: -1px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .positioning {
+        font-size: 1.03rem !important;
+        padding-left: 12px;
+      }
+
+      .profile-card {
+        padding: 14px;
+        border-radius: 26px;
+      }
+
+      .profile-photo {
+        border-radius: 20px;
+        aspect-ratio: 1 / 1.08;
+      }
+
+      .profile-info {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .card,
+      .project-card,
+      .metric,
+      .timeline-item {
+        padding: 20px;
+        border-radius: 22px;
+      }
+
+      .skills {
+        justify-content: center;
+      }
+
+      .skill {
+        font-size: 0.82rem;
+        padding: 8px 11px;
+      }
+
+      .contact-card a {
+        font-size: 0.9rem;
+        word-break: break-word;
+      }
+
+      .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 14px;
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      nav ul {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .badge {
+        font-size: 0.78rem;
+        padding: 7px 10px;
+      }
+
+      .card,
+      .project-card,
+      .metric,
+      .timeline-item {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="#inicio" aria-label="Ir para o início">Jeniffer<span>Alba</span></a>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="reveal">
+        <div class="badge">Front-end • Dados • ITSM • Tecnologia</div>
+        <h1>Olá, eu sou <span>Jeniffer Alba</span>.</h1>
+        <p class="positioning">
+          Transformo dados, tecnologia e melhoria contínua em soluções que fortalecem processos e melhoram a experiência dos usuários.
+        </p>
+        <p>
+          Estudante de Engenharia da Computação e profissional em formação na área de tecnologia, com experiência em IT Service Management, suporte, infraestrutura, desenvolvimento web, análise de indicadores e criação de dashboards em Power BI.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/jeniffer-alba/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/JenifferAlba/TrendsIT_Projeto1.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="profile-card" aria-label="Foto e resumo profissional">
+        <figure class="profile-photo">
+          <img src="assets/foto-jeniffer.jpg" alt="Foto profissional de Jeniffer Alba" />
+        </figure>
+        <div class="profile-info">
+          <strong>Jeniffer Caroline Alba</strong>
+          <span>Engenharia da Computação • ITSM • Power BI • Front-end</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="sobre">
+      <div class="container reveal">
+        <div class="section-title">
+          <span>Sobre mim</span>
+          <h2>Perfil profissional</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>Apresentação</h3>
+            <p>
+              Sou uma profissional em desenvolvimento constante, com trajetória em tecnologia, suporte, infraestrutura, desenvolvimento web e governança de TI. Atualmente, aprofundo meus conhecimentos em Engenharia da Computação, projetos digitais, dados, automação e inovação.
+            </p>
+            <p>
+              Busco atuar em projetos que conectem tecnologia, análise de dados e eficiência operacional, contribuindo para decisões mais inteligentes e experiências mais simples para os usuários.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Competências</h3>
+            <p>Principais tecnologias, áreas e ferramentas presentes na minha trajetória:</p>
+            <div class="skills">
+              <span class="skill">HTML5</span>
+              <span class="skill">CSS3</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Power BI</span>
+              <span class="skill">GitHub</span>
+              <span class="skill">ITSM</span>
+              <span class="skill">ITIL</span>
+              <span class="skill">ServiceNow</span>
+              <span class="skill">Python</span>
+              <span class="skill">SQL</span>
+              <span class="skill">IoT</span>
+              <span class="skill">Node.js</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="biografia">
+      <div class="container reveal">
+        <div class="section-title">
+          <span>Biografia</span>
+          <h2>Minha jornada na tecnologia</h2>
+        </div>
+
+        <article class="card">
+          <p>
+            Sou Jeniffer Caroline Alba, estudante de Engenharia da Computação pela UNIVESP e profissional em formação na área de tecnologia. Minha trajetória reúne experiências em desenvolvimento web, suporte técnico, infraestrutura, governança de TI e análise de dados.
+          </p>
+          <p>
+            Ao longo da minha caminhada, desenvolvi competências em HTML5, CSS3, GitHub, Python, SQL, Power BI e práticas relacionadas a ITSM e melhoria contínua. Atualmente, atuo com foco em indicadores, experiência do usuário, análise de satisfação e construção de dashboards, conectando tecnologia à tomada de decisão.
+          </p>
+          <p>
+            Tenho interesse especial por front-end, dados, automação, inovação e soluções digitais que resolvem problemas reais. Meu objetivo é continuar evoluindo como profissional de tecnologia, criando projetos modernos, úteis, acessíveis e bem estruturados.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resultados">
+      <div class="container reveal">
+        <div class="section-title">
+          <span>Diferenciais</span>
+          <h2>Resultados que comunico</h2>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="metric">
+            <strong>KPIs</strong>
+            <span>Construção e acompanhamento de indicadores para apoiar governança e tomada de decisão.</span>
+          </article>
+          <article class="metric">
+            <strong>BI</strong>
+            <span>Dashboards em Power BI para transformar dados em visualizações claras e estratégicas.</span>
+          </article>
+          <article class="metric">
+            <strong>ITSM</strong>
+            <span>Apoio à melhoria contínua, análise de satisfação e processos orientados à experiência do usuário.</span>
+          </article>
+          <article class="metric">
+            <strong>Front</strong>
+            <span>Criação de interfaces modernas, responsivas, semânticas e preparadas para GitHub Pages.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="container reveal">
+        <div class="section-title">
+          <span>Trajetória</span>
+          <h2>Experiência e formação</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <small>Atual</small>
+            <h3>Estágio em IT Service Management — Bayer</h3>
+            <p>
+              Atuação com governança de TI, análise de pesquisas de satisfação, apoio em melhoria contínua, construção de KPIs, acompanhamento de reclamações e desenvolvimento de dashboards em Power BI.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <small>Formação acadêmica</small>
+            <h3>Engenharia da Computação — UNIVESP</h3>
+            <p>
+              Formação voltada para desenvolvimento de sistemas, computação escalável, projetos integradores, automação, dados e soluções tecnológicas aplicadas a problemas reais.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <small>Experiências anteriores</small>
+            <h3>Desenvolvimento Web, Suporte e Infraestrutura</h3>
+            <p>
+              Vivência com manutenção de sites e aplicações, suporte a usuários, configuração de hardware e software, documentação técnica, redes, servidores e apoio a políticas de segurança da informação.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="container reveal">
+        <div class="section-title">
+          <span>Portfólio</span>
+          <h2>Vitrine de projetos</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div>
+              <h3>Portfólio Front-end</h3>
+              <p>Site pessoal moderno, semântico e responsivo, desenvolvido com HTML5 e CSS3 para publicação no GitHub Pages.</p>
+            </div>
+            <a class="project-link" href="https://github.com/JenifferAlba/TrendsIT_Projeto1.git" target="_blank" rel="noopener noreferrer">Ver repositório →</a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Monitoramento IoT de Energia</h3>
+              <p>Projeto acadêmico com ESP32, sensor PZEM-004T, Node.js, SQLite e Chart.js para monitorar consumo de energia.</p>
+            </div>
+            <a class="project-link" href="#contato">Saiba mais →</a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Dashboards e Indicadores</h3>
+              <p>Construção de indicadores e painéis em Power BI para apoiar análise de satisfação, governança e melhoria contínua em TI.</p>
+            </div>
+            <a class="project-link" href="#contato">Fale comigo →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container reveal">
+        <div class="section-title">
+          <span>Contato</span>
+          <h2>Vamos conversar?</h2>
+        </div>
+
+        <div class="contact-grid">
+          <article class="card contact-card">
+            <h3>Informações</h3>
+
+            <div style="display:flex; flex-direction:column; gap:14px; margin-top:12px;">
+
+              <a href="mailto:jeniffer.alba91@gmail.com" target="_blank" style="display:flex; align-items:center; gap:12px; padding:14px; border-radius:14px; background:rgba(255,255,255,0.06); border:1px solid var(--border);">
+                📧 <span>jeniffer.alba91@gmail.com</span>
+              </a>
+
+              <a href="https://wa.me/5511982702594" target="_blank" style="display:flex; align-items:center; gap:12px; padding:14px; border-radius:14px; background:rgba(37,211,102,0.12); border:1px solid rgba(37,211,102,0.3);">
+                💬 <span>WhatsApp</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/jeniffer-alba/" target="_blank" style="display:flex; align-items:center; gap:12px; padding:14px; border-radius:14px; background:rgba(10,102,194,0.15); border:1px solid rgba(10,102,194,0.4);">
+                🔗 <span>LinkedIn</span>
+              </a>
+
+              <a href="https://github.com/JenifferAlba" target="_blank" style="display:flex; align-items:center; gap:12px; padding:14px; border-radius:14px; background:rgba(255,255,255,0.08); border:1px solid var(--border);">
+                🐙 <span>GitHub</span>
+              </a>
+
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Disponível para conexões profissionais</h3>
+            <p>
+              Tenho interesse em oportunidades, projetos e conexões nas áreas de tecnologia, front-end, análise de dados, ITSM, automação, inovação e melhoria contínua. Será um prazer conversar sobre ideias, desafios e soluções digitais.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/5511982702594" target="_blank" rel="noopener noreferrer" aria-label="Falar com Jeniffer pelo WhatsApp">☎</a>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Jeniffer Caroline Alba. Direitos Reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
