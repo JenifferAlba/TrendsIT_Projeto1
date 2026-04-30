@@ -35,10 +35,3 @@ Este é meu portfólio profissional desenvolvido com foco em:
   <img src="https://skillicons.dev/icons?i=html,css,js,git,github,python,nodejs" />
 </p>
 
-## 📂 Estrutura do projeto
-
-```bash
-📁 portfolio-jeniffer
- ┣ 📄 index.html
- ┣ 📄 README.md
- ┗ 📁 assets
