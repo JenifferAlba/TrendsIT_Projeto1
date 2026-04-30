@@ -33,28 +33,3 @@ Este é meu portfólio profissional desenvolvido com foco em:
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,git,github,python,nodejs" />
-</p>
-
----
-
-## 📸 Preview do projeto
-
-<p align="center">
-  <img src="assets/foto-jeniffer.png" alt="Foto profissional de Jeniffer Alba">
-</p>
-
----
-
-## 🌐 Acesse o projeto online
-
-👉 Em breve via GitHub Pages
-
----
-
-## 📂 Estrutura do projeto
-
-```bash
-📁 portfolio-jeniffer
- ┣ 📄 index.html
- ┣ 📄 README.md
- ┗ 📁 assets
