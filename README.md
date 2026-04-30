@@ -1,56 +1,60 @@
-# 💼 Portfólio Profissional — Jeniffer Alba
+<h1 align="center">💼 Jeniffer Alba</h1>
 
-## 🚀 Sobre o projeto
-Este é meu portfólio profissional desenvolvido com foco em front-end, semântica HTML5 e responsividade.
+<p align="center">
+  🚀 Portfólio Profissional | Front-end • Dados • ITSM
+</p>
 
-O projeto apresenta minha trajetória, competências e principais projetos na área de tecnologia.
-
----
-
-## 🧠 Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- Responsividade (Mobile First)
-- Git e GitHub
-
----
-
-## 🎯 Funcionalidades
-
-- Apresentação profissional
-- Biografia
-- Vitrine de projetos
-- Links para GitHub e LinkedIn
-- Contato direto (WhatsApp e e-mail)
-- Layout moderno e responsivo
+<p align="center">
+  <a href="https://github.com/JenifferAlba">
+    <img src="https://img.shields.io/github/followers/JenifferAlba?label=GitHub&style=social">
+  </a>
+  <a href="https://github.com/JenifferAlba/TrendsIT_Projeto1">
+    <img src="https://img.shields.io/github/stars/JenifferAlba/TrendsIT_Projeto1?style=social">
+  </a>
+</p>
 
 ---
 
-## 🌐 Acesse o projeto
+## ✨ Sobre o projeto
 
-👉 (coloque aqui depois o link do GitHub Pages)
+Este é meu portfólio profissional desenvolvido com foco em:
 
----
+- ✔ HTML5 semântico  
+- ✔ CSS3 moderno  
+- ✔ Responsividade (Mobile First)  
+- ✔ Boas práticas de front-end  
+- ✔ Versionamento com Git  
 
-## 📸 Preview
-
-![Preview do projeto](./assets/foto-jeniffer.jpg)
-
----
-
-## 📬 Contato
-
-- 📧 Email: jeniffer.alba91@gmail.com
-- 💼 LinkedIn: https://www.linkedin.com/in/jeniffer-alba/
-- 🐙 GitHub: https://github.com/JenifferAlba
+💡 O objetivo é apresentar minha trajetória, competências e projetos de forma profissional e acessível.
 
 ---
 
-## 📌 Observações
+## 🧠 Tecnologias
 
-Este projeto foi desenvolvido como parte das atividades acadêmicas com foco em versionamento com Git e publicação no GitHub.
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,git,github,python,nodejs" />
+</p>
 
 ---
 
-⭐ Se gostou do projeto, não esqueça de dar um star no repositório!
+## 📸 Preview do projeto
+
+<p align="center">
+  <img src="./assets/foto-jeniffer.jpg" width="300px">
+</p>
+
+---
+
+## 🌐 Acesse o projeto online
+
+👉 Em breve via GitHub Pages
+
+---
+
+## 📂 Estrutura do projeto
+
+```bash
+📁 portfolio-jeniffer
+ ┣ 📄 index.html
+ ┣ 📄 README.md
+ ┗ 📁 assets
