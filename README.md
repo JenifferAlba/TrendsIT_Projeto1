@@ -35,14 +35,6 @@ Este é meu portfólio profissional desenvolvido com foco em:
   <img src="https://skillicons.dev/icons?i=html,css,js,git,github,python,nodejs" />
 </p>
 
----
-
-## 🌐 Acesse o projeto online
-
-👉 Em breve via GitHub Pages
-
----
-
 ## 📂 Estrutura do projeto
 
 ```bash
