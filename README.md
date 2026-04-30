@@ -40,7 +40,7 @@ Este é meu portfólio profissional desenvolvido com foco em:
 ## 📸 Preview do projeto
 
 <p align="center">
-  <img src="./assets/foto-jeniffer.jpg" width="300px">
+  <img src="assets/foto-jeniffer.png" alt="Foto profissional de Jeniffer Alba">
 </p>
 
 ---
